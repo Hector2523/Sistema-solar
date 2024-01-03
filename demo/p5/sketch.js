@@ -4,7 +4,7 @@ let angle = 0;
 let angleEarth = 0;
 
 function setup() {
-  createCanvas( 2000, 1000, WEBGL);
+  createCanvas(900, 900, WEBGL);
   xval = 32;
   yval = 300;
 
@@ -15,8 +15,8 @@ function setup() {
 }
 
 function draw() {
-  let x = cos(angle) * 180;
-  let z = sin(angle) * 75;
+  let x = cos(angle) * 40;
+  let z = sin(angle) * 40;
 
   let earthX = cos(angleEarth) * 140;
   let earthZ = sin(angleEarth) * 140;
@@ -29,17 +29,16 @@ function draw() {
     translate((earthX + 0), 0, (earthZ + 0));
     sphere(20);
     noStroke();
-    rotateY(frameCount * 0.01);
-    angleEarth += 1.8;
-  }
-  pop();
-  push();
-  {
-    translate(x, 0, z);
-    specularMaterial(100);
-    noStroke();
-    sphere(10);
-    angle += 1.8;
+
+    angleEarth += .8;
+    {
+      translate(x, 0, z);
+      specularMaterial(100);
+      noStroke();
+      sphere(10);
+      rotateY(millis() / 1);
+      angle += 6;
+    }
   }
   pop();
   push();

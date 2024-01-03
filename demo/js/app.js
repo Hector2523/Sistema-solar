@@ -30,9 +30,9 @@ particlesJS("particles-js", {
       speed: 1,
       direction: "none",
       random: true,
-      straight: false,
+      straight: true,
       out_mode: "out",
-      bounce: false,
+      bounce: true,
       attract: { enable: false, rotateX: 600, rotateY: 600 }
     }
   },
