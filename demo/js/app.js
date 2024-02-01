@@ -1,6 +1,6 @@
 particlesJS("particles-js", {
   particles: {
-    number: { value: 500, density: { enable: true, value_area: 900 } },
+    number: { value: 500, density: { enable: true, value_area: 1000 } },
     color: { value: "#ffffff" },
     shape: {
       type: "circle",
@@ -11,12 +11,12 @@ particlesJS("particles-js", {
     opacity: {
       value: 1,
       random: true,
-      anim: { enable: true, speed: 1, opacity_min: 0, sync: false }
+      anim: { enable: true, speed: 2, opacity_min: 0, sync: false }
     },
     size: {
       value: 3,
       random: true,
-      anim: { enable: false, speed: 4, size_min: 0.3, sync: false }
+      anim: { enable: true, speed: 4, size_min: 0.3, sync: true }
     },
     line_linked: {
       enable: false,
@@ -27,10 +27,10 @@ particlesJS("particles-js", {
     },
     move: {
       enable: true,
-      speed: 1,
-      direction: "none",
+      speed: 2,
+      direction: "",
       random: true,
-      straight: true,
+      straight: false,
       out_mode: "out",
       bounce: true,
       attract: { enable: false, rotateX: 600, rotateY: 600 }
@@ -45,7 +45,7 @@ particlesJS("particles-js", {
     },
     modes: {
       grab: { distance: 400, line_linked: { opacity: 1 } },
-      bubble: { distance: 200, size: 0, duration: 2, opacity: 0, speed: 3, value: 500 },
+      bubble: { distance: 100, size: 0, duration: 2, opacity: 0, speed: 3, value: 500 },
       repulse: { distance: 300, duration: 0.4},
       push: { particles_nb: 4 },
       remove: { particles_nb: 2 }

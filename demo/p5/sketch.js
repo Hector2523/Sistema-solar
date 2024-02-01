@@ -8,10 +8,6 @@ function setup() {
   xval = 32;
   yval = 300;
 
-  pointLight(255, 255, 255, 0, 0, 0);
-
-  specularMaterial(250);
-
 }
 
 function draw() {
@@ -26,27 +22,36 @@ function draw() {
   push();
 
   {
-    translate((earthX + 0), 0, (earthZ + 0));
+    translate(earthX, 0, earthZ);
+    rotateY(millis() / -8);
     sphere(20);
+
     noStroke();
 
-    angleEarth += .8;
+    angleEarth += .45;
     {
       translate(x, 0, z);
-      specularMaterial(100);
+      ambientLight(60);
+      pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
       sphere(10);
-      rotateY(millis() / 1);
-      angle += 6;
+      rotateY(millis() / -7);
+      specularColor(255, 0, 0);
+      shininess(50);
+      
+
+      angle += 5;
     }
   }
   pop();
   push();
 
   {
-    translate(0, 0, 0);
     sphere(42);
+    rotateY(millis() / -10);
     noStroke();
+    translate(0, 0, 0);
+    box();
   }
 
   pop();
