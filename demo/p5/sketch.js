@@ -35,7 +35,7 @@ function draw() {
       pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
       sphere(10);
-      rotateY(millis() / -7);
+      rotateY(millis() / 1);
       specularColor(255, 0, 0);
       shininess(50);
       
