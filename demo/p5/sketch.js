@@ -32,7 +32,7 @@ function draw() {
   {
     translate(earthX, 0, earthZ);
     texture(earth);
-    rotateY(millis() / 3);
+    // rotateY(millis() / 3);
     sphere(20);
 
     // angleEarth += .45;
@@ -42,7 +42,7 @@ function draw() {
       // ambientLight(60);
       // pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
-      rotateY(frameCount * -1.5);
+      rotateY(frameCount * -20);
       sphere(10);
       
 
@@ -54,8 +54,7 @@ function draw() {
 
   {
   pointLight(255, 255, 0, 0, 0, 200);
-  ambientLight(200);
-  pointLight(255, 255, 0, 0, 0, 200);
+  ambientLight(100);
 
 
   stroke('black');
