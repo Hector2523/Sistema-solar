@@ -1,9 +1,9 @@
 let earth;
-let moon;
+// let moon;
 
 function preload() {
   earth = loadImage('image/earth.jpg');
-  moon = loadImage('image/moon.jpg');
+  // moon = loadImage('image/moon.jpg');
 }
 
 let xval;
@@ -38,9 +38,9 @@ function draw() {
     // angleEarth += .45;
     {
       translate(x, 0, z);
-      texture(moon);
-      ambientLight(60);
-      pointLight(255, 255, 255, 255, 255, 50);
+      // texture(moon);
+      // ambientLight(60);
+      // pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
       rotateY(frameCount * -1.5);
       sphere(10);
