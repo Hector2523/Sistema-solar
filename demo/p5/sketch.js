@@ -1,3 +1,11 @@
+let earth;
+let moon;
+
+function preload() {
+  earth = loadImage('image/earth.jpg');
+  moon = loadImage('image/moon.jpg');
+}
+
 let xval;
 let yval;
 let angle = 0;
@@ -23,36 +31,33 @@ function draw() {
 
   {
     translate(earthX, 0, earthZ);
-    rotateY(millis() / -8.4);
+    texture(earth);
+    rotateY(millis() / 3);
     sphere(20);
 
-    noStroke();
-
-    angleEarth += .45;
+    // angleEarth += .45;
     {
       translate(x, 0, z);
+      texture(moon);
       ambientLight(60);
       pointLight(255, 255, 255, 255, 255, 50);
-      stroke('black');
-      specularColor(255, 0, 0);
-      shininess(50);
+      noStroke();
       rotateY(frameCount * -1.5);
       sphere(10);
       
 
-      angle += 5;
+      // angle += 5;
     }
   }
   pop();
   push();
 
   {
-    
-  
+  pointLight(255, 255, 0, 0, 0, 200);
   ambientLight(200);
   pointLight(255, 255, 0, 0, 0, 200);
-  directionalLight(255, 255, 255, 1, 1, -1); // Luz direcional para criar sombra
-  
+
+
   stroke('black');
   fill("#f49e12");
   rotateY(frameCount * -0.5);
@@ -68,4 +73,3 @@ function draw() {
   if (xval) camera(0, 0, 400, 0, 0, 0, 0, -1, 0);
 
 }
-
