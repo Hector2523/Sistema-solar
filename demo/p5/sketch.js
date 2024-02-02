@@ -23,7 +23,7 @@ function draw() {
 
   {
     translate(earthX, 0, earthZ);
-    rotateY(millis() / -8);
+    rotateY(millis() / -8.4);
     sphere(20);
 
     noStroke();
@@ -33,11 +33,11 @@ function draw() {
       translate(x, 0, z);
       ambientLight(60);
       pointLight(255, 255, 255, 255, 255, 50);
-      noStroke();
-      sphere(10);
-      rotateY(millis() / 1);
+      stroke('black');
       specularColor(255, 0, 0);
       shininess(50);
+      rotateY(frameCount * -1.5);
+      sphere(10);
       
 
       angle += 5;
@@ -47,11 +47,18 @@ function draw() {
   push();
 
   {
-    sphere(42);
-    rotateY(millis() / -10);
-    noStroke();
-    translate(0, 0, 0);
-    box();
+    
+  
+  ambientLight(200);
+  pointLight(255, 255, 0, 0, 0, 200);
+  directionalLight(255, 255, 255, 1, 1, -1); // Luz direcional para criar sombra
+  
+  stroke('black');
+  fill("#f49e12");
+  rotateY(frameCount * -0.5);
+  
+  sphere(42);
+   
   }
 
   pop();
