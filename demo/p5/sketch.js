@@ -21,10 +21,10 @@ function setup() {
 }
 
 function draw() {
-  let x = cos(angle) * 40;
+  let x = cos(angle) * 42;
   let z = sin(angle) * 40;
 
-  let earthX = cos(angleEarth) * 140;
+  let earthX = cos(angleEarth) * 142;
   let earthZ = sin(angleEarth) * 140;
   angleMode(DEGREES);
   background("#142230");
@@ -44,7 +44,7 @@ function draw() {
       // ambientLight(60);
       // pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
-      rotateY(frameCount * -22);
+      rotateY(frameCount * -52);
       sphere(10);
       
 
@@ -61,7 +61,7 @@ function draw() {
 
   noStroke();
   
-  rotateY(frameCount * -2);
+  rotateY(frameCount * -3.4);
   texture(sun);
   sphere(42);
    
