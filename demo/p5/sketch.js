@@ -1,9 +1,11 @@
 let earth;
 let moon;
+let sun;
 
 function preload() {
   earth = loadImage('image/earth.jpg');
   moon = loadImage('image/moon.jpg');
+  sun = loadImage('image/sun.png');
 }
 
 let xval;
@@ -32,21 +34,21 @@ function draw() {
   {
     translate(earthX, 0, earthZ);
     texture(earth);
-    // rotateY(millis() / 3);
+    rotateY(frameCount * -70);
     sphere(20);
 
-    // angleEarth += .45;
+    angleEarth += .45;
     {
       translate(x, 0, z);
       texture(moon);
       // ambientLight(60);
       // pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
-      rotateY(frameCount * -20);
+      rotateY(frameCount * -22);
       sphere(10);
       
 
-      // angle += 5;
+      angle += 4;
     }
   }
   pop();
@@ -54,13 +56,13 @@ function draw() {
 
   {
   pointLight(255, 255, 0, 0, 0, 200);
-  ambientLight(100);
+  ambientLight(300);
 
 
-  stroke('black');
-  fill("#f49e12");
-  rotateY(frameCount * -0.5);
+  noStroke();
   
+  rotateY(frameCount * -2);
+  texture(sun);
   sphere(42);
    
   }
