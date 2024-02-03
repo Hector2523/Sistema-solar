@@ -41,8 +41,7 @@ function draw() {
     {
       translate(x, 0, z);
       texture(moon);
-      // ambientLight(60);
-      // pointLight(255, 255, 255, 255, 255, 50);
+      pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
       rotateY(frameCount * -52);
       sphere(10);
@@ -55,8 +54,8 @@ function draw() {
   push();
 
   {
-  pointLight(255, 255, 0, 0, 0, 200);
-  ambientLight(300);
+  pointLight(255, 255, 255, 255, 255, 200);
+  ambientLight('white');
 
 
   noStroke();
