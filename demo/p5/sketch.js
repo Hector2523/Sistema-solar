@@ -14,7 +14,7 @@ let angle = 0;
 let angleEarth = 0;
 
 function setup() {
-  createCanvas(900, 900, WEBGL);
+  createCanvas(windowWidth, windowHeight, WEBGL);
   xval = 32;
   yval = 300;
 
@@ -41,11 +41,9 @@ function draw() {
     {
       translate(x, 0, z);
       texture(moon);
-      pointLight(255, 255, 255, 255, 255, 50);
       noStroke();
       rotateY(frameCount * -52);
       sphere(10);
-      
 
       angle += 4;
     }
@@ -54,15 +52,14 @@ function draw() {
   push();
 
   {
-  pointLight(255, 255, 255, 255, 255, 200);
-  ambientLight('white');
-
 
   noStroke();
-  
+  1
   rotateY(frameCount * -3.4);
   texture(sun);
   sphere(42);
+  pointLight(255, 255, 255, (50 - width/2), 0, 50);
+  
    
   }
 
@@ -72,4 +69,8 @@ function draw() {
   if (yval) camera(0, 300, 100, 0, 0, 0, 0, -1, 0);
   if (xval) camera(0, 0, 400, 0, 0, 0, 0, -1, 0);
 
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
