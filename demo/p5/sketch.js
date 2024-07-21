@@ -29,33 +29,30 @@ function draw() {
   angleMode(DEGREES);
   background("#142230");
 
-  
+
 
   push();
-
   noStroke();
 
 
+
+  translate(earthX, 0, earthZ);
+  texture(earth);
+  rotateY(frameCount * -3);
+  sphere(20);
+  noStroke();
+
+  angleEarth += .42;
   {
-    translate(earthX, 0, earthZ);
-    texture(earth);
-    rotateY(frameCount * -3);
-    sphere(20);
-    noStroke();
+    translate(x, 0, z);
+    texture(moon);
+    rotateY(frameCount * -10);
+    sphere(10);
 
-    angleEarth += .42;
-    {
-      translate(x, 0, z);
-      texture(moon);
-      rotateY(frameCount * -10);
-      sphere(10);
-
-      angle += 4.5;
-    }
+    angle += 4.5;
   }
 
   pop();
-  push();
 
   {
     noStroke();
